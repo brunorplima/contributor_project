@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Amaranth");
+@import url("http://weloveiconfonts.com/api/?family=entypo");
 /*
     Author: Bruno Lima
 */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
 h1, h2, h3 {
   font-family: "Amaranth", sans-serif;
 }
@@ -194,6 +199,7 @@ aside h3 {
 
 #examples #carouselExampleIndicators .carousel-indicators {
   bottom: 3.5em;
+  z-index: 1;
 }
 
 #examples #carouselExampleIndicators .carousel-caption {
@@ -309,6 +315,7 @@ aside h3 {
 
 #examples #example3 div:first-child div {
   display: flex;
+  overflow: hidden;
   height: 10em;
   width: 15em;
   background: -webkit-gradient(linear, left top, right top, color-stop(0, #ff8888), color-stop(0.3, #ffffff), color-stop(0.7, #ffffff), color-stop(1, #ff8888));
@@ -325,8 +332,9 @@ aside h3 {
 #examples #example3 div:first-child div p {
   margin: auto;
   font-weight: 700;
-  font-size: 3em;
+  font-size: 2em;
   color: gray;
+  border: 0 solid gray;
 }
 
 #examples #example3 div:nth-child(even) {
@@ -335,6 +343,13 @@ aside h3 {
 
 #examples #example3 div:last-child {
   flex: 1;
+}
+
+.entypo-up-circled {
+  color: black;
+  font-size: 3em;
+  text-align: center;
+  display: block;
 }
 
 footer {
@@ -388,6 +403,10 @@ footer a:hover {
   #examples .carousel-caption {
     bottom: 7.5em;
   }
+  #examples #example2 figure figcaption {
+    float: none;
+    margin-top: 1em;
+  }
 }
 
 @media screen and (max-width: 1015px) {
@@ -404,7 +423,6 @@ footer a:hover {
 
 @media screen and (max-width: 991px) {
   #banner #some-links a {
-    background-color: #abd2fa;
     padding: .2em;
   }
   #carouselExampleIndicators > div {
@@ -428,7 +446,6 @@ footer a:hover {
     font-size: .5em;
   }
   #banner #some-links a {
-    background-color: #abd2fa;
     padding: .2em;
   }
 }
@@ -451,6 +468,9 @@ footer a:hover {
   }
   #examples .carousel-caption {
     bottom: 3.5em;
+  }
+  #examples #example2 {
+    flex-flow: column wrap;
   }
 }
 

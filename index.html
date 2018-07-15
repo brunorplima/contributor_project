@@ -19,17 +19,13 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-        <script>
-            $(function(){
-            console.log('jQuery: Page loading complete!');
-            });
-        </script>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
         <link rel="stylesheet" href="css/main.min.css">
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="javascript/main.js"></script>
     </head>
   <body>
     <div id="banner">
@@ -58,7 +54,6 @@
         </div>
     </div>
 
-    
 
     
     <div id="nav-div" class="bg-light">
@@ -278,102 +273,42 @@
                                     <figcaption id="caption">Theme 1</figcaption>
                                 </figure>
                                 <div>
-                                    <br/><br/>
-                                    <button class="my-btn" type="button" id="resize">Resize image</button>
-                                    <br/><br/>
-                                    <button class="my-btn" type="button" id="change-theme">Change theme</button>
+                                    <p class="my-btn" id="resize">Resize image</p>
+                                    <br/>
+                                    <p class="my-btn" id="change-theme">Change theme</p>
                                 </div>
-                                <script>
-                                    $(window).ready(function(){
-                                        var resize = $('#resize');
-                                        var img = $('#expand-image');
-                                        var change = $('#change-theme');
-                                        var caption = $('#caption');
-                                        var figure = $('figure');
-                                        var isSmall = true;
-                                        var theme = 1;
-                                        
-                                        resize.click(function(){
-                                            if (isSmall){
-                                                img.css('max-width', '90%');
-                                                img.css('max-height', '90%');
-                                                isSmall = false;
-                                            } else {
-                                                img.css('max-width', '30%');
-                                                img.css('max-height', '30%');
-                                                isSmall = true;
-                                            }
-                                        });
-
-                                        change.click(function(){
-                                            if (theme == 1){
-                                                figure.css('background-color', '#8edce6');
-                                                caption.text('Theme 2');
-                                                caption.css('background-color', '#0075A2');
-                                                caption.css('color', '#dfdfdf');
-                                                theme++;
-                                            } else if (theme == 2){
-                                                figure.css('background-color', '#7692ff');
-                                                caption.text('Theme 3');
-                                                caption.css('background-color', '#D6D6D6');
-                                                caption.css('color', 'black');
-                                                theme++;
-                                            } else {
-                                                figure.css('background-color', '#abd2fa');
-                                                
-                                                caption.css('background-color', 'transparent');
-                                                caption.text('Theme 1');
-                                                theme = 1;
-                                            }
-                                        });
-                                    });
-                                </script>
                             </div>
                         </section>
                         <br/><br/><br/><br/>
                         
                         <section>
                             <h4>Example3</h4>
-                            <p>You can create animations with click or hover events</p>
+                            <p>You can create animations using click events. They can work simultaneously.</p>
                             <div id="example3">
                                 <div>
                                     <div id="preview">
-                                        <p>PREVIEW</p>
+                                        <p id="pv-text">PREVIEW</p>
                                     </div>
                                 </div>
                                 <div id="hovers">
                                     <ul>
-                                        <li><button id="translate" class="my-btn" type="button">Translate</button></li>
-                                        <li><button data-ng-if="rotate" class="my-btn" type="button">Rotate</button></li>
-                                        <li><button id="skew" class="my-btn" type="button">Skew</button></li>
-                                    </ul>
-                                </div>
-                                <div id="clickers">
-                                    <ul>
-                                        <li><button id="scale" class="my-btn" type="button">Scale</button></li>
-                                        <li><button id="skew-rotate" class="my-btn" type="button">Skew - rotate</button></li>
+                                        <li><p id="focus" class="my-btn">Focus text</p></li>
+                                        <li><p id="res-fast" class="my-btn">Resize fast</p></li>
+                                        <li><p id="res-slow" class="my-btn">Resize Slow</p></li>
                                     </ul>
                                 </div>
                             </div>
                         </section>
                     </section>
-                    <script>
-                        $(window).ready(function(){
-                            var preview = $('#preview');
-
-                            $('#translate').click(function(){
-                                preview.animate({ width: "28.5em" }, 'slow');
-                                preview.animate({ width: "15em" }, 'slow');
-                            });
-                        });
-                    </script>
                 </div>
+                
             </div>
         </div>
     
-        <br/><br/>
+        <br/>
+        <a href="#" id="top" class="entypo-up-circled"></a>
+        <br/>
     </div>
-    
     <div class="container">
         <div class="row">
             <footer class="col-md-12">
@@ -386,32 +321,6 @@
         </div>
     </div>
     
-
-    <script>
-        $(document).ready(function(){
-            $('.navbar-toggler').click(function(){
-                $('#navbarSupportedContent').slideToggle();
-            });
-
-            var viewport = $(window).width();
-
-            window.onscroll = function(){
-                fixNav();
-                viewport = $(window).width();
-            }
-
-            var navbar = document.getElementById('nav-div');
-            var sticky = navbar.offsetTop;
-            function fixNav(){
-                if(window.pageYOffset >= sticky) {
-                    navbar.classList.add('sticky');
-                } else {
-                    navbar.classList.remove('sticky');
-                }
-            }
-            
-        });
-    </script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   </body>

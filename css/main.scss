@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Amaranth');
+@import url('http://weloveiconfonts.com/api/?family=entypo');
 /*
     Author: Bruno Lima
 */
@@ -45,6 +46,10 @@ $heading-bg3: #ddeadc;
 	-ms-transition:     $transition; 
     -o-transition:      $transition;
     transition:         $transition;  
+}
+
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
 }
 
 
@@ -212,6 +217,7 @@ aside h3{
         }
         .carousel-indicators{
             bottom: 3.5em;
+            z-index: 1;
         }
         .carousel-caption{
             @include rgba-bg(.4);
@@ -295,6 +301,7 @@ aside h3{
         }
         div:first-child div{
             display: flex;
+            overflow: hidden;
             height: 10em;
             width: 15em;
             background: -webkit-gradient(linear, left top, right top, color-stop(0, #ff8888), color-stop(0.3, #ffffff), color-stop(0.7, #ffffff), color-stop(1, #ff8888));
@@ -307,8 +314,9 @@ aside h3{
             p{
                 margin: auto;
                 font-weight: 700;
-                font-size: 3em;
+                font-size: 2em;
                 color: gray;
+                border: 0 solid gray;
             }
         }
 
@@ -322,6 +330,12 @@ aside h3{
     }
 }
 
+.entypo-up-circled{
+    color: black;
+    font-size: 3em;
+    text-align: center;
+    display: block;
+}
 
 
 footer{
@@ -379,6 +393,14 @@ footer{
         .carousel-caption{
             bottom: 7.5em;
         }
+        #example2{
+            figure{
+                figcaption{
+                    float: none;
+                    margin-top: 1em;
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 1015px){
@@ -397,7 +419,6 @@ footer{
     #banner{
         #some-links{
             a{
-                background-color: $cl-paleblue;
                 padding: .2em;
             }
         }
@@ -423,7 +444,6 @@ footer{
         }
         #some-links{
             a{
-                background-color: $cl-paleblue;
                 padding: .2em;
             }
         }
@@ -449,6 +469,10 @@ footer{
         }
         .carousel-caption{
             bottom: 3.5em;
+        }
+
+        #example2{
+            flex-flow: column wrap;
         }
     }
 }
