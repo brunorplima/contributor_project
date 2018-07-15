@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Amaranth");
+/*
+    Author: Bruno Lima
+*/
 h1, h2, h3 {
   font-family: "Amaranth", sans-serif;
 }
@@ -21,6 +24,15 @@ h1 {
 
 ul {
   list-style: none;
+}
+
+a {
+  color: #7692ff;
+}
+
+a:hover {
+  color: #4662cf;
+  text-decoration: none;
 }
 
 #banner {
@@ -140,6 +152,10 @@ aside h3 {
   background-color: #e5e9ec;
 }
 
+#padd {
+  padding: 1em;
+}
+
 .extra-content div {
   padding: 1em;
 }
@@ -152,20 +168,32 @@ aside h3 {
   padding: 1em;
 }
 
-#examples .carousel-indicators {
-  bottom: 3.5em;
-}
-
 #examples h4 {
   border-bottom: 0.1em solid #27233a;
   margin-left: auto;
   margin-right: auto;
-  width: 20%;
+  width: 8em;
   text-align: center;
 }
 
 #examples #carouselExampleIndicators {
   background-color: #aaaaaa;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+}
+
+#examples #carouselExampleIndicators .carousel-item {
+  height: 33em;
+}
+
+#examples #carouselExampleIndicators .carousel-indicators {
+  bottom: 3.5em;
 }
 
 #examples #carouselExampleIndicators .carousel-caption {
@@ -177,8 +205,136 @@ aside h3 {
   border: none;
 }
 
-#examples .carousel-item {
-  height: 33em;
+#examples #carouselExampleIndicators:hover {
+  -webkit-box-shadow: 0 8px 15px -2px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 8px 15px -2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 8px 15px -2px rgba(0, 0, 0, 0.8);
+  width: auto50px;
+  height: auto;
+}
+
+#examples .my-btn {
+  border: 0;
+  width: 6.7em;
+  border-bottom: 0.3em solid #505168;
+  background-color: transparent;
+  text-align: center;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#examples .my-btn:hover {
+  cursor: pointer;
+  background-color: #505168;
+  color: white;
+}
+
+#examples #example2 {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#examples #example2 figure {
+  background-color: #abd2fa;
+  flex: 6;
+  padding: 1em;
+  border-radius: .6em;
+  -webkit-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#examples #example2 figure img {
+  max-width: 30%;
+  max-height: 30%;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#examples #example2 figure figcaption {
+  font-size: 2em;
+  padding: .5m 3em;
+  width: 4.5em;
+  float: right;
+  text-align: center;
+}
+
+#examples #example2 div {
+  flex: 1;
+}
+
+#examples #example2 div p {
+  border-bottom: 0.3em solid #505168;
+  text-align: center;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#examples #example2 div p:hover {
+  cursor: pointer;
+  background-color: #505168;
+  color: white;
+}
+
+#examples #example3 {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#examples #example3 ul {
+  list-style: none;
+}
+
+#examples #example3 li {
+  margin: .7em 0;
+}
+
+#examples #example3 div:first-child {
+  flex: 8;
+}
+
+#examples #example3 div:first-child div {
+  display: flex;
+  height: 10em;
+  width: 15em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #ff8888), color-stop(0.3, #ffffff), color-stop(0.7, #ffffff), color-stop(1, #ff8888));
+  background: -moz-linear-gradient(left, #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+  background: -webkit-linear-gradient(left, #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+  background: -o-linear-gradient(left, #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+  background: -ms-linear-gradient(left, #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+  background: linear-gradient(left, #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+  -webkit-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+}
+
+#examples #example3 div:first-child div p {
+  margin: auto;
+  font-weight: 700;
+  font-size: 3em;
+  color: gray;
+}
+
+#examples #example3 div:nth-child(even) {
+  flex: 1;
+}
+
+#examples #example3 div:last-child {
+  flex: 1;
 }
 
 footer {
@@ -226,6 +382,12 @@ footer a:hover {
     background-position: center;
     background-image: url("img/slideshow/responsive_background.jpg");
   }
+  #examples #carouselExampleIndicators > ol {
+    bottom: 1em;
+  }
+  #examples .carousel-caption {
+    bottom: 7.5em;
+  }
 }
 
 @media screen and (max-width: 1015px) {
@@ -245,22 +407,19 @@ footer a:hover {
     background-color: #abd2fa;
     padding: .2em;
   }
-  #examples .carousel-indicators {
-    bottom: 5.5em;
-  }
-  #examples .carousel-item {
-    height: 18em;
-  }
-  #examples .carousel-caption {
-    bottom: 3.5em;
+  #carouselExampleIndicators > div {
+    height: 28em;
+    padding: 0;
+    margin-top: -5em;
   }
 }
 
 @media screen and (max-width: 840px) {
   #banner {
     background-image: url("../img/home-banner-mini.jpg");
+    background-size: unset;
+    background-position-x: 100%;
     background-attachment: fixed;
-    background-size: contain;
   }
   #banner h1 {
     font-size: 1.5em;
@@ -275,6 +434,15 @@ footer a:hover {
 }
 
 @media screen and (max-width: 767px) {
+  .row {
+    display: flex;
+  }
+  #aside {
+    order: 1;
+  }
+  #not-aside {
+    order: 2;
+  }
   #examples .carousel-indicators {
     bottom: 1em;
   }
@@ -288,8 +456,7 @@ footer a:hover {
 
 @media screen and (max-width: 575px) {
   #banner {
-    background-size: unset;
-    background-position-x: 90%;
+    background-image: url("../img/home-banner-mini.jpg");
   }
   #banner #course-name {
     position: absolute;
@@ -308,6 +475,15 @@ footer a:hover {
   }
   #banner #some-links ul li {
     display: inline-block;
+  }
+  #carouselExampleIndicators > div {
+    height: 25em;
+    padding: 0;
+    margin-top: -8em;
+  }
+  #carouselExampleIndicators > ol {
+    padding: .5em;
+    background-color: rgba(39, 35, 58, 0.376);
   }
 }
 
